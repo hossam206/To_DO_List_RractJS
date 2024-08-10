@@ -1,0 +1,162 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(50% 123.47% at 50% 50%, #00ff94 0%, #720059 100%),
+    linear-gradient(121.28deg, #669600 0%, #ff0000 100%),
+    linear-gradient(360deg, #0029ff 0%, #8fff00 100%),
+    radial-gradient(100% 164.72% at 100% 100%, #6100ff 0%, #00ff57 100%),
+    radial-gradient(100% 148.07% at 0% 0%, #fff500 0%, #51d500 100%);
+  background-blend-mode: screen, color-dodge, overlay, difference, normal;
+  width: 50%;
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 40px;
+}
+.Heading,
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #3a3a3a;
+  padding: 10px 0px;
+}
+.title {
+  justify-content: start;
+}
+.TOdOContent {
+  max-width: 100%;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 6px;
+  transition: all 1s all ease-in-out;
+}
+
+.AddNewTask form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.AddNewTask form input {
+  width: 100%;
+  min-height: auto;
+  padding: 10px;
+  outline: none;
+  border: none;
+  background: transparent;
+  transition: all 0.2s linear;
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
+}
+.AddNewTask form button {
+  background: #54b4d3;
+  margin: 0px 10px;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: 0.3s all ease-in-out;
+}
+.AddNewTask form button:hover {
+  box-shadow: 0px;
+}
+.Tasks .TasksTypes ul {
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  align-items: center;
+  justify-content: start;
+}
+.Tasks .TasksTypes ul li {
+  margin: 0px 24px 0px 0px;
+  display: block;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+.Tasks .TasksTypes ul li:hover {
+  background-color: #eff3f5;
+}
+.ShowingTasks {
+  padding: 4px 0px;
+}
+.ShowingTasks .Task {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 14px;
+  background-color: #eff3f5;
+  border-radius: 6px;
+  margin: 7px 0px;
+  animation: fadein 1s linear;
+}
+.ShowingTasks .Task input {
+  background-image: none;
+  margin: 2px 5px 0px 0px;
+  border-radius: 0.25rem;
+  margin-top: 0.19em;
+  outline: none;
+  width: 22px;
+  height: 19px;
+  cursor: pointer;
+}
+.ShowingTasks .Task label {
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.Message {
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.95);
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.active {
+  color: #54b4d3 !important;
+  border-bottom: 1px solid #3b71ca;
+  transition: 0.3s all ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 70%;
+  }
+  .title h2 {
+    font-size: 16px;
+  }
+  .Heading h4
+  {
+    font-size: 10px;
+  }
+
+}
+@media (max-width: 387px) {
+  .Tasks .TasksTypes ul {
+    flex-wrap: wrap;
+  }
+  .Tasks .TasksTypes ul li {
+    padding: 10px;
+  }
+}
